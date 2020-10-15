@@ -29,8 +29,7 @@ export default {
 
   }, 
   async create(request: Request, response: Response){
-    console.log(request.files)
-
+    
     const {
       name,
       latitude,
@@ -61,7 +60,7 @@ export default {
     }
 
     const schema = Yup.object().shape({
-      nome: Yup.string().required('Nome obrigatório'),
+      name: Yup.string().required(),
       latitude: Yup.number().required(),
       longitude: Yup.number().required(),
       about: Yup.string().required().max(300),
