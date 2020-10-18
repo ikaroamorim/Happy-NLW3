@@ -22,7 +22,7 @@ export default function Header({ title, showCancel = true }: HeaderProps) {
         <Feather name="arrow-left" size={24} color="#15b6d6" />
       </BorderlessButton>
 
-      <Text style={styles.title}>{props.title}</Text>
+      <Text style={styles.title}>{title}</Text>
 
       { showCancel ? (
         <BorderlessButton onPress={() => { }}>
